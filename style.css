@@ -14,7 +14,7 @@ body{
 }
 
 .container{
-    display: flex;
+    /* display: flex; */
     background-color: hsl(0, 0%, 100%);
     width: 800px;
     height: 600px;
@@ -22,13 +22,11 @@ body{
     overflow: hidden;
 }
 
-.contImg{
-    display: flex;    
+.img1{
+    width: 50%;
 }
 
 .content{
-    display: flex;
-    flex-direction: column;
     padding: 40px;
 }
 
@@ -74,6 +72,7 @@ h2{
 }
 
 button{
+    width: 100%;
     padding: 20px 0;
     border-radius: 12px;
     background-color: hsl(158, 36%, 37%);
@@ -87,5 +86,64 @@ button{
 }
 
 .img2{
+    width: 20px;
+    height: 20px;
     margin-right: 15px;
+}
+
+@media (max-width: 375px){
+
+    body{
+        padding: 15px;
+    }
+
+    .container{
+        flex-direction: column;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .img1{
+        background-image: url(assets/image-product-mobile.jpg);
+    }
+
+    .content{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    h1{
+        font-size: 30px;
+        line-height: 32px;
+        padding: 15px 0;
+    }
+
+    .secondParagraph{
+        line-height: 25px;
+        font-size: 14.5px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    .values{
+        padding: 18px 0;
+    }
+   
+    button{
+        padding: 12px 0;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    .img2{
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+    }
 }
